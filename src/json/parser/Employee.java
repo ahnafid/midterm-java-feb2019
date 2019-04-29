@@ -17,35 +17,20 @@ public class Employee {
         this.department = department;
     }
 
-    public String getEmpEmail() {
-        return empEmail;
-    }
+    public String getEmpEmail() {return empEmail;}
 
-    public void setEmpEmail(String empEmail) {
-        this.empEmail = empEmail;
-    }
+    public void setEmpEmail(String empEmail) {this.empEmail = empEmail;}
 
-    public String getEmpName() {
-        return empName;
-    }
+    public String getEmpName() {return empName;}
 
-    public void setEmpName(String empName) {
-        this.empName = empName;
-    }
+    public void setEmpName(String empName) {this.empName = empName;}
 
-    public String getSalary() {
-        return salary;
-    }
+    public String getSalary() {return salary;}
 
-    public void setSalary(String salary) {
-        this.salary = salary;
-    }
+    public void setSalary(String salary) {this.salary = salary;}
 
-    public String getDepartment() {
-        return department;
-    }
+    public String getDepartment() {return department;}
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
+    public void setDepartment(String department) { this.department = department;}
+
 }

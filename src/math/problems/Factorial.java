@@ -9,5 +9,19 @@ public class Factorial {
          *
          */
 
+        Factorial factorial = new Factorial();
+        long value = 5;
+        long number = factorial.factorial(value);
+        System.out.println(number);
+
+    }
+
+    public long factorial(long y) {
+        long number = 1;
+        for (long b = 1; b <= y; b++) {
+            number = number * b;
+
+        }
+        return number;
     }
 }

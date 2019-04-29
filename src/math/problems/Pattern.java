@@ -8,6 +8,13 @@ public class Pattern {
          *
          *
          */
+        int number = 100;
+         for (int k =0;k<1;k++){
+             for (int j = number -1;j>=k;j--){
+                 System.out.print(j + " ");
+             }
+         }
+
 
 
     }

@@ -3,9 +3,7 @@ package codelab.status;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class CsvReader {
 
@@ -16,7 +14,7 @@ public class CsvReader {
          You need to find the average score of the class.
          */
 
-        String csvFilePath = System.getProperty("user.dir") + "/src/codelab/status/roster.Java-tba.1556113067.csv";
+        String csvFilePath = System.getProperty("user.dir") + "/src/codelab/status/roster-file-03-02-2019.csv";
         String line = "";
         String cvsSplitBy = ",";
         BufferedReader br = null;
@@ -33,6 +31,7 @@ public class CsvReader {
                 String[] name = line.split(cvsSplitBy);
                 roster.add(new Trainee(name[5].replace("\"", ""), name[4].replace("\"",
                         ""), Integer.parseInt(name[10])));
+
             }
 
         } catch (IOException e) {
@@ -40,7 +39,6 @@ public class CsvReader {
         }
         Collections.sort(roster);
         for (Trainee student : roster) {
-
             if (student.getNumberOfExercisesSolved() >= 600) {
                 System.out.print("You did pretty good-->                    ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
@@ -65,6 +63,20 @@ public class CsvReader {
             }
         }
 
+
+        int Students = roster.size();
+        int Total = 0;
+        for(Trainee tr : roster){
+            Total=Total+tr.getNumberOfExercisesSolved();
+
+        }
+        System.out.println(Students);
+        System.out.println(Total);
+
+        int average= Total/Students;
+        System.out.println("Total average of the code lab is : "+ average);
+
     }
+
 
 }
